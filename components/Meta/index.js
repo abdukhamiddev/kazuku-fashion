@@ -4,7 +4,7 @@ const Meta = ({ titleShort, titleLong, description, url, keywords }) => {
 	return (
 		<>
 			<Head>
-				<title>{title}</title>
+				<title>{titleShort}</title>
 				<meta name="description" content={description} />
 				<meta name="keywords" content={keywords} />
 				<link rel="canonical" href={url} />
@@ -15,3 +15,4 @@ const Meta = ({ titleShort, titleLong, description, url, keywords }) => {
 		</>
 	);
 };
+export default Meta;
