@@ -2,17 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
+	background: black;
+	background-image: url("/texture/sec.jpg");
+	overflow-x: hidden;
+	min-height: 100vh;
+	min-width: 100vw;
 }
 
 * {

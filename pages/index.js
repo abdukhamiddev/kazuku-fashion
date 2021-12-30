@@ -22,8 +22,8 @@ export default function Home({ collections }) {
 				keywords="KAZUKU, Women  Clothing, Best woman clothing"
 			/>
 			<Layout>
-				<section className="w-full h-[502px] flex flex-col items-center justify-evenly mt-[-45px]">
-					<div className="w-[67px] h-[67px] bg-[url('/static/logo.jpg')] bg-center bg-cover"></div>
+				<section className="">
+					<div className=""></div>
 					<h2>
 						<span>CREATIVE FASHION </span> <span>STREETWEAR DESIGN</span>
 					</h2>
