@@ -1,4 +1,69 @@
 .card {
 	width: 100%;
 	height: 70vh;
+	max-height: 700px;
+	display: block;
+
+	@media only screen and (min-width: 1600px) and (min-height: 700) {
+		height: 90vh;
+		max-height: 900px;
+	}
+	@media only screen and (max-width: 700px) {
+		height: 350px;
+		max-height: 388px;
+	}
+	@media only screen and (min-height: 1000px) {
+		height: 89vh;
+		max-height: 908px;
+	}
+	&__img {
+		width: 100%;
+		height: 92%;
+
+		@media only screen and (max-width: 700px) {
+			height: 92%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+	.card__tags {
+		height: 8%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		&-line {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			h6 {
+				color: #cfcfcf;
+				span {
+					font-weight: 300;
+					color: #cfcfcf;
+				}
+			}
+			.card__tags-time {
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 21px;
+				letter-spacing: 0.2em;
+				color: #cfcfcf;
+				@media only screen and (min-height: 1000px) and (min-width: 1000px) {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+.card:nth-child(2) {
+	padding-bottom: 0;
+	@media only screen and (max-width: 700px) {
+		padding-bottom: 1rem;
+	}
 }

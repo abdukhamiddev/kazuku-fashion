@@ -12,7 +12,7 @@ export default function Home({ collections }) {
 	);
 
 	const mostPopularRef = useRef();
-
+	console.log(collections);
 	return (
 		<>
 			<Meta
@@ -58,7 +58,7 @@ export default function Home({ collections }) {
 					</h1>
 				</section>
 				<div className="deadline"></div>
-				<section ref={mostPopularRef} className="most-popular">
+				<section ref={mostPopularRef} className="most-popular-collection">
 					<header className="filter">
 						<div>Most Popular</div>
 
@@ -71,9 +71,9 @@ export default function Home({ collections }) {
 								mostPopularCollection.id
 							)}`}
 							SRC={mostPopularCollection.coverImg}
-							ALT={`${mostPopularCollection.titleEng},by ${mostPopularCollection.by}`}
-							engCL={mostPopularCollection.titleEng}
-							jpCL={mostPopularCollection.jpCL}
+							ALT={`${mostPopularCollection.titleENG},by ${mostPopularCollection.by}`}
+							engCL={mostPopularCollection.titleENG}
+							jpCL={mostPopularCollection.titleJPN}
 							YEAR={mostPopularCollection.year}
 						/>
 						<div className="most-popular-about">
@@ -112,9 +112,9 @@ export default function Home({ collections }) {
 										HREF={`/collection[id]`}
 										AS={`/collection/${collection.id}`}
 										SRC={collection.coverImg}
-										ALT={`${collection.titleEng},by ${collection.by}`}
-										engCL={collection.titleEng}
-										jpCL={collection.jpCL}
+										ALT={`${collection.titleENG},by ${collection.by}`}
+										engCL={collection.titleENG}
+										jpCL={collection.titleJPN}
 										YEAR={collection.year}
 									/>
 								);
@@ -125,27 +125,27 @@ export default function Home({ collections }) {
 					<header className="filter">
 						<div>2022</div>
 						<div>ホワイトベール</div>
-
-						<Grid>
-							{collections
-								.filter(({ mostPopular }) => !mostPopular)
-								.filter(({ year }) => year === "2022")
-								.map((collection) => {
-									return (
-										<Card
-											key={collection.id}
-											HREF={`/collection[id]`}
-											AS={`/collection/${collection.id}`}
-											SRC={collection.coverImg}
-											ALT={`${collection.titleEng},by ${collection.by}`}
-											engCL={collection.titleEng}
-											jpCL={collection.jpCL}
-											YEAR={collection.year}
-										/>
-									);
-								})}
-						</Grid>
 					</header>
+
+					<Grid>
+						{collections
+							.filter(({ mostPopular }) => !mostPopular)
+							.filter(({ year }) => year === "2022")
+							.map((collection) => {
+								return (
+									<Card
+										key={collection.id}
+										HREF={`/collection[id]`}
+										AS={`/collection/${collection.id}`}
+										SRC={collection.coverImg}
+										ALT={`${collection.titleENG},by ${collection.by}`}
+										engCL={collection.titleENG}
+										jpCL={collection.titleJPN}
+										YEAR={collection.year}
+									/>
+								);
+							})}
+					</Grid>
 				</section>
 			</Layout>
 		</>

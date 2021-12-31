@@ -9,7 +9,7 @@ const Card = ({ HREF, SRC, ALT, engCL, jpCL, YEAR, AS }) => {
 						<img src={SRC} alt={ALT} className="" />
 						<div className="card__tags">
 							<div className="card__tags-line">
-								<h6 className="">
+								<h6>
 									{engCL}/ <span>{jpCL}</span>
 								</h6>
 								<div className="card__tags-time">{YEAR}</div>
