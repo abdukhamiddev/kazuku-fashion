@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./typography";
+@import "./reset";
 
+@import "./components/Grid";
+@import "./components/Card";
+@import "./pages/index";
 body {
 	background: black;
 	background-image: url("/texture/sec.jpg");

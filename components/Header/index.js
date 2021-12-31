@@ -15,7 +15,7 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<div>
+				<div className="header">
 					<Logo />
 					<BurgerMenu />
 					<nav>

@@ -1,8 +1,8 @@
 const BurgerMenu = () => {
 	return (
 		<>
-			<input type="checkbox" />
-			<label htmlFor="checkbox">
+			<input type="checkbox" id="checkbox" />
+			<label htmlFor="checkbox" className="menu">
 				<div />
 				<div />
 				<div />

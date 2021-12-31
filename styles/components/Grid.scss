@@ -1,0 +1,10 @@
+.grid__section {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4vw;
+	margin-top: 20px;
+	@media screen and (max-width: 700px) {
+		grid-template-columns: 1fr;
+	}
+}

@@ -5,14 +5,14 @@ import Card from "../components/Card";
 import Grid from "../components/Grid";
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
-import Image from "next/image";
 
 export default function Home({ collections }) {
 	const mostPopularCollection = collections.find(
 		({ mostPopular }) => mostPopular
 	);
+
 	const mostPopularRef = useRef();
-	console.log(collections);
+
 	return (
 		<>
 			<Meta
@@ -22,12 +22,12 @@ export default function Home({ collections }) {
 				keywords="KAZUKU, Women  Clothing, Best woman clothing"
 			/>
 			<Layout>
-				<section className="">
-					<div className=""></div>
+				<section className="header-section">
+					<div className="header-section__logo"></div>
 					<h2>
 						<span>CREATIVE FASHION </span> <span>STREETWEAR DESIGN</span>
 					</h2>
-					<h1>
+					<h1 className="">
 						<span className="word" dur="0.95">
 							KAZUKU
 						</span>
@@ -57,9 +57,9 @@ export default function Home({ collections }) {
 						</span>
 					</h1>
 				</section>
-				<div></div>
-				<section ref={mostPopularRef}>
-					<header>
+				<div className="deadline"></div>
+				<section ref={mostPopularRef} className="most-popular">
+					<header className="filter">
 						<div>Most Popular</div>
 
 						<div>ホワイトベール</div>
@@ -76,9 +76,9 @@ export default function Home({ collections }) {
 							jpCL={mostPopularCollection.jpCL}
 							YEAR={mostPopularCollection.year}
 						/>
-						<div>
-							<div>
-								<div>
+						<div className="most-popular-about">
+							<div className="most-popular-about__header">
+								<div className="most-popular-about__header-content">
 									<section>
 										<h4>{mostPopularCollection.by}</h4>
 										<p>{mostPopularCollection.smallInfo}</p>
@@ -87,13 +87,8 @@ export default function Home({ collections }) {
 											laboris nisi ut aliquip ex ea commodo consequat.
 										</p>
 									</section>
-									<div>
-										<Image
-											src="/data/mostPopular/mostPopular.png"
-											width={300}
-											height={300}
-											alt="girl"
-										/>
+									<div className="img">
+										<img src="/data/mostPopular/mostPopular.png" alt="girl" />
 									</div>
 								</div>
 							</div>

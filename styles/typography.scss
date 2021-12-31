@@ -1,0 +1,135 @@
+@import "./env";
+
+h1,
+.fk-h1 {
+	font-family: $mainFont;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 107px;
+	letter-spacing: normal;
+	color: #ffffff;
+
+	@media screen and (min-height: 1000px) and (min-width: 1600px) {
+		font-size: 80px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		font-size: 45px;
+		line-height: 70px;
+	}
+
+	@media screen and (max-width: 700px) {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 40px;
+	}
+
+	&.logo {
+		@media screen and (max-width: 700px) {
+			text-align: center;
+		}
+
+		span.n {
+			font-style: italic;
+		}
+	}
+}
+
+h2,
+.fk-h2 {
+	font-family: $secondFont;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 54px;
+	line-height: 63px;
+	letter-spacing: 0.2em;
+	color: #ffffff;
+
+	@media screen and (max-width: 1300px) {
+		font-size: 35px;
+	}
+
+	@media screen and (max-width: 700px) {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		letter-spacing: 0.15em;
+	}
+}
+
+h3,
+.fk-h3 {
+	font-family: $secondFont;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.2em;
+	color: #c9c9c9;
+}
+
+h4,
+.fk-h4 {
+	font-family: $secondFont;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+	letter-spacing: 0.2em;
+	color: #c9c9c9;
+}
+
+h5,
+.fk-h5 {
+	font-family: $mainFont;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 37px;
+	letter-spacing: normal;
+	color: #ffffff;
+
+	@media screen and (max-width: 1300px) {
+		font-size: 18px;
+	}
+
+	@media screen and (max-width: 700px) {
+		font-style: normal;
+		font-size: 14px;
+		line-height: 21px;
+	}
+}
+
+h6,
+.fk-h6 {
+	font-family: $secondFont;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	@media screen and (min-height: 1000px) and (min-width: 1600px) {
+		font-size: 22px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #bfbfbf;
+	}
+}
+
+p,
+i,
+a,
+div {
+	font-family: $secondFont;
+	color: #c9c9c9;
+}

@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
 		<>
-			<footer className="w-full h-[180px] flex items-center justify-center" />
+			<footer className="footer" />
 		</>
 	);
 };

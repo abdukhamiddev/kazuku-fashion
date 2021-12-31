@@ -1,7 +1,7 @@
 const Grid = ({ children }) => {
 	return (
 		<>
-			<section>{children}</section>
+			<section className="grid__section">{children}</section>
 		</>
 	);
 };
