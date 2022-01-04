@@ -3,10 +3,12 @@
 
 @import "./components/Grid";
 @import "./components/Card";
-@import "./pages/index";
+
 @import "./components/Layout";
 @import "./components/Header";
 @import "./components/Logo";
+@import "./pages/index";
+@import "./pages/collection/[id]";
 body {
 	background: black;
 	background-image: url("/texture/sec.jpg");

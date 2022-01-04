@@ -9,9 +9,9 @@ function Collection({ collection }) {
 	return (
 		<>
 			<Meta
-				titleShort={`KAZUKI | ${collection.titleENG}`}
-				titleLong={`KAZUKI | ${collection.titleENG} Collection`}
-				description={`KAZUKI | ${collection.titleENG}. ${collection.about}`}
+				titleShort={`KAZUKU | ${collection.titleENG}`}
+				titleLong={`KAZUKU | ${collection.titleENG} Collection`}
+				description={`KAZUKU | ${collection.titleENG}. ${collection.about}`}
 				keywords="KAZUKU, Women's Clothing Collections, Best women's clothing 2021-2022, Moda 2021, 2022"
 			/>
 			<Layout>
@@ -26,7 +26,7 @@ function Collection({ collection }) {
 									<h2 className="fk-h1 logo">
 										KA <span className="n">ZU</span>KU/
 									</h2>
-									<h1>{collection.titleENG}</h1>
+									<h1 className="fk-h2">{collection.titleENG}</h1>
 								</div>
 								<div className="str2">
 									<h5>{collection.by}</h5>
@@ -42,8 +42,8 @@ function Collection({ collection }) {
 				</section>
 				<section id="collection-collage" className="collage">
 					<img src={collection.collage} alt={collection.titleENG} />
-					<div className="lein">
-						<div className="lineimg"></div>
+					<div className="line">
+						<div className="line-img"></div>
 					</div>
 					<section className="about" id="about">
 						<h6>
