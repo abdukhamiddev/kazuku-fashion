@@ -24,7 +24,6 @@ $MOBILE_ADAPTIVE: 550px;
 	}
 	&__h {
 		width: 100%;
-		//	background-color: red;
 		height: 100vh;
 		z-index: -1;
 		display: flex;
@@ -80,12 +79,14 @@ $MOBILE_ADAPTIVE: 550px;
 				}
 			}
 		}
+
 		.str3 {
 			width: 100%;
 			height: 100px;
 			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
+
 			p {
 				font-family: "Questrial", sans-serif;
 				width: 60vw;
@@ -93,8 +94,8 @@ $MOBILE_ADAPTIVE: 550px;
 				font-size: 16px;
 				line-height: 22px;
 				letter-spacing: 0.05em;
-
 				color: #e7e7e7;
+
 				@media screen and (min-height: 1000px) and (min-width: 1600px) {
 					font-size: 20px;
 					line-height: 26px;
@@ -111,22 +112,165 @@ $MOBILE_ADAPTIVE: 550px;
 					width: 100%;
 				}
 			}
+
+			.time {
+				font-family: "Questrial", sans-serif;
+				max-width: 553px;
+				font-size: 16px;
+				line-height: 22px;
+				letter-spacing: 0.05em;
+				color: #e7e7e7;
+
+				@media screen and (min-height: 1000px) and (min-width: 1600px) {
+					font-size: 20px;
+					line-height: 26px;
+				}
+
+				@media screen and (max-width: $MOBILE_ADAPTIVE) {
+					display: none;
+				}
+			}
 		}
-		.time {
-			font-family: "Questrial", sans-serif;
+	}
+}
 
-			max-width: 553px;
+.collage {
+	width: 100%;
+	margin-top: 80px;
+	min-height: 900px;
+
+	@media only screen and (min-width: 1660px) {
+		min-height: 1300px;
+	}
+
+	@media only screen and (max-width: 700px) {
+		margin-top: -60px;
+		min-height: 0;
+	}
+	img {
+		width: 100%;
+		object-position: center;
+		object-fit: cover;
+	}
+}
+.line {
+	width: 12px;
+	height: 125px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.line-img {
+		width: 12px;
+		height: 125px;
+		background-image: url("/static/line.png");
+		background-repeat: no-repeat;
+	}
+}
+.about {
+	padding-top: 7rem;
+	h6 {
+		color: rgb(119, 119, 119);
+		letter-spacing: 0.1em;
+
+		@media screen and (min-width: 1600px) {
+			font-size: 20px;
+		}
+
+		@media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+			font-size: 12px;
+			font-weight: 700;
+		}
+	}
+
+	.fk-h1 {
+		font-family: $mainFont;
+		font-size: 70px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 107px;
+		color: #ffffff;
+		margin-top: 30px;
+
+		@media screen and (min-width: 1600px) {
+			font-size: 90px;
+			line-height: 112px;
+		}
+
+		@media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+			font-size: 60px;
+			line-height: 97px;
+		}
+
+		@media screen and (max-width: $MOBILE_ADAPTIVE) {
+			font-family: Bodoni Moda;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 26px;
+			line-height: 40px;
+			color: #ebebeb;
+		}
+	}
+}
+.anchors {
+	height: 70px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	display: flex;
+	justify-content: space-between;
+
+	.two {
+		margin-left: 10px;
+	}
+
+	a {
+		cursor: pointer;
+	}
+
+	a,
+	.year {
+		font-family: $secondFont;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+
+		@media screen and (min-width: 1660px) {
+			font-size: 22px;
+		}
+
+		@media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
 			font-size: 16px;
-			line-height: 22px;
-			letter-spacing: 0.05em;
-			@media screen and (min-height: 1000px) and (min-width: 1600px) {
-				font-size: 20px;
-				line-height: 26px;
+		}
+
+		@media screen and (max-width: $PC_ADAPTIVE_SMALL) {
+			font-size: 14px;
+		}
+
+		span {
+			color: #949494;
+			transition-duration: 0.85s;
+
+			&:nth-child(1),
+			&:nth-child(4),
+			&:nth-child(7),
+			&:nth-child(12) {
+				transition-duration: 0.45s;
 			}
 
-			@media screen and (max-width: $MOBILE_ADAPTIVE) {
-				display: none;
+			&:nth-child(5),
+			&:nth-child(10),
+			&:nth-child(16) {
+				transition-duration: 0.25s;
 			}
+
+			&:nth-child(2),
+			&:nth-child(9),
+			&:nth-child(15) {
+				transition-duration: 0.65s;
+			}
+		}
+
+		&:hover span {
+			color: #3d3d3d;
 		}
 	}
 }

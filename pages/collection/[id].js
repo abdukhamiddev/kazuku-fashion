@@ -32,26 +32,30 @@ function Collection({ collection }) {
 									<h5>{collection.by}</h5>
 								</div>
 								<div className="str3">
-									<p>{collection.about}</p>
-									<p>{collection.about}</p>
+									<p>
+										{collection.about}
+										{collection.about}
+									</p>
+
+									<div className="time">{collection.release}</div>
 								</div>
-								<div className="time">{collection.release}</div>
 							</div>
 						</div>
 					</div>
 				</section>
 				<section id="collection-collage" className="collage">
 					<img src={collection.collage} alt={collection.titleENG} />
-					<div className="line">
-						<div className="line-img"></div>
-					</div>
-					<section className="about" id="about">
-						<h6>
-							The New Collection <br /> / S - J 2022
-						</h6>
-						<h2 className="fk-h1">{collection.about}</h2>
-					</section>
 				</section>
+				<div className="line">
+					<div className="line-img"></div>
+				</div>
+				<section className="about" id="about">
+					<h6>
+						The New Collection <br /> / S - J 2022
+					</h6>
+					<h2 className="fk-h1">{collection.about}</h2>
+				</section>
+
 				<div className="anchors">
 					<div>
 						<Link href="/">
