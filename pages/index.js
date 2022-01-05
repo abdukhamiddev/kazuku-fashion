@@ -1,10 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import axios from "axios";
-import { useRef, useState } from "react";
+import gsap from "gsap";
+import { useRef, useState, useEffect } from "react";
 import Card from "../components/Card";
 import Grid from "../components/Grid";
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
 export default function Home({ collections }) {
 	const mostPopularCollection = collections.find(
@@ -13,6 +18,31 @@ export default function Home({ collections }) {
 
 	const mostPopularRef = useRef();
 	console.log(collections);
+
+	useEffect(() => {
+		ScrollTrigger.refresh();
+		const targets = document.querySelectorAll(".header-section word");
+
+		const width = window.innerWidth;
+		const start = width > 500 ? 300 : 200;
+
+		const typeDevice = (width) => (700 ? "Desktop" : "Mobile");
+		const valuesForTransfrom = ["-10", "20", "-10", "20", "-20", "2.5", "25"];
+
+		targets.forEach((target, i) => {
+			const timeline = gsap.timeline({
+				scrollTrigger: {
+					id: "trigger3",
+					trigger: target,
+					start: `top top+=${start}`,
+					scrub: true,
+				},
+			});
+
+			if (typeDevice === "Desktop") {
+			}
+		});
+	}, []);
 	return (
 		<>
 			<Meta
