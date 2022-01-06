@@ -1,7 +1,7 @@
 import App from "next/app";
 import Head from "next/head";
 import "../styles/globals.scss";
-import { AnimatedSharedLayout } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 
 export default class MyApp extends App {
 	render() {
@@ -14,9 +14,9 @@ export default class MyApp extends App {
 						content="minimum-scale=1.0 , width=device-width"
 					/>
 				</Head>
-				<AnimatedSharedLayout type="crossfade">
+				<AnimateSharedLayout type="crossfade">
 					<Component {...pageProps} key={router.route} />
-				</AnimatedSharedLayout>
+				</AnimateSharedLayout>
 			</>
 		);
 	}
