@@ -28,18 +28,18 @@ export default function Home({ collections }) {
 			const start = width > 500 ? 300 : 200;
 
 			const typeDevice = width >= 700 ? "Desktop" : "Mobile";
+
 			const valuesForTransform = ["-10", "20", "-10", "20", "-20", "2.5", "25"];
 
 			targets.forEach((target, i) => {
 				const timeline = gsap.timeline({
 					scrollTrigger: {
-						id: "trigger3",
+						id: "word",
 						trigger: target,
 						start: `top top+=${start}`,
 						scrub: true,
 					},
 				});
-
 				if (typeDevice === "Desktop") {
 					timeline.fromTo(
 						target,
@@ -69,19 +69,21 @@ export default function Home({ collections }) {
 				}
 			});
 		}
+
 		{
 			const height = window.innerHeight;
 			const width = window.innerWidth;
 
 			const PC_ADAPTIVE = height > 1000 ? height / 3 : height / 4.5;
+			console.log(PC_ADAPTIVE);
 
 			if (width > 500) {
 				const timeline = gsap.timeline({
 					scrollTrigger: {
-						id: "trigger3",
+						id: "most-popular",
 						trigger: mostPopularRef.current,
 						start: `top bottom-=${PC_ADAPTIVE}`,
-						end: `center-=400`,
+						end: "center-=400",
 						scrub: true,
 					},
 				});
@@ -91,8 +93,6 @@ export default function Home({ collections }) {
 					{ opacity: 0, transitionDuration: 0.6 },
 					{ opacity: 1, transitionDuration: 0.6 }
 				);
-			} else {
-				console.log("GSAP OFF");
 			}
 		}
 	}, []);
@@ -143,7 +143,7 @@ export default function Home({ collections }) {
 				<div className="deadline"></div>
 				<section ref={mostPopularRef} className="most-popular-collection">
 					<header className="filter">
-						<div>Most Popular</div>
+						<div className="most-popular">Most Popular</div>
 
 						<div>ホワイトベール</div>
 					</header>
